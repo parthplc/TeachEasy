@@ -1,22 +1,16 @@
-import time
 import torch
 from transformers import T5ForConditionalGeneration,T5Tokenizer
-import streamlit as st
 import numpy as np
 import streamlit as st 
-import os
 from fastpunct import FastPunct
 from transformers import DistilBertTokenizer, DistilBertForQuestionAnswering
-import torch
 
 from textblob import TextBlob 
 import spacy
 from gensim.summarization import summarize
 
-import spacy
 from spacy.lang.pt.stop_words import STOP_WORDS
 from sklearn.feature_extraction.text import CountVectorizer
-import argparse
 import en_core_web_sm
 
 
@@ -45,10 +39,12 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def sumy_summarizer(text):
   return summarize(text)
 
+
 def punctuation(text):
   text_correct = text.lower()
   final = fastpunct.punct([text_correct])
   return str(final[0])
+
 
 def summarization_spacy(text):
 
@@ -108,8 +104,6 @@ def summarization_spacy(text):
 
 
 
-
-
 def answergen(context, question):
 
     tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased',return_token_type_ids = True)
@@ -132,6 +126,7 @@ def answergen(context, question):
     #print ("\nAnswer : ",answer_tokens_to_string)
     return answer_tokens_to_string
 
+  
 def summary_t5(text):
 
   model = T5ForConditionalGeneration.from_pretrained('t5-small')
@@ -196,6 +191,7 @@ def greedy_decoding (inp_ids,attn_mask):
   Question =  tokenizer.decode(greedy_output[0], skip_special_tokens=True,clean_up_tokenization_spaces=True)
   return Question.strip().capitalize()
 
+
 def beam_search_decoding (inp_ids,attn_mask,model,tokenizer):
   # model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_boolean_questions')
   # tokenizer = T5Tokenizer.from_pretrained('t5-small')
@@ -211,6 +207,7 @@ def beam_search_decoding (inp_ids,attn_mask,model,tokenizer):
   Questions = [tokenizer.decode(out, skip_special_tokens=True, clean_up_tokenization_spaces=True) for out in
                beam_output]
   return [Question.strip().capitalize() for Question in Questions]
+
 
 def question_generation(text):
 
@@ -230,10 +227,6 @@ def question_generation(text):
   output = beam_search_decoding(input_ids,attention_masks,model,tokenizer)
 
   return output
-
-
-
-
 
 
 
@@ -298,12 +291,6 @@ def main():
       st.write(l[0])
       st.write(l[1])
       st.write(l[2])
-
-
-
-
-
-
 
 
   st.sidebar.subheader("About App")
