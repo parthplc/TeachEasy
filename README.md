@@ -1,21 +1,21 @@
 # TeachEasy
 A tool for teachers and student.
 
-<title> Main template interface </title>
+<h1> Main template interface </h1>
 <img src="1.jpg">
-<title> Answer extraction from questions </title>
+<h1> Answer extraction from questions </h1>
 
 <img src="2.jpg">
 
-<title> Summarization with spacy using Text Summarization( Extractive Summarization) </title>
+<h1> Summarization with spacy using Text Summarization( Extractive Summarization) </h1>
 
 <img src="3.jpg">
-<title> Summarization using T5 (Abstractive Summarization) </title>
+<h1> Summarization using T5 (Abstractive Summarization) </h1>
 
 <img src="4.jpg">
-<title> Paraphrasing of Question</title>
+<h1> Paraphrasing of Question</h1>
 
 <img src="5.jpg">
-<title> Boolean Question generation </title>
+<h1> Boolean Question generation </h1>
 
 <img src="6.jpg">
