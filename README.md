@@ -16,7 +16,7 @@ Question generation, Summarization and Paraphrasing is achieved using T5 model. 
 
 ```streamlit run main.py```
 
-## Results and App snapshots
+# Results and App snapshots
 
 <h1> Main template interface </h1>
 <img src="1.jpg">
