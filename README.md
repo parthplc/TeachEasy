@@ -14,7 +14,7 @@ Question generation, Summarization and Paraphrasing is achieved using T5 model. 
 
 ## How to use repo
 
-```streamlit run main.py```
+```streamlit run app.py```
 
 # Results and App snapshots
 
