@@ -1,5 +1,22 @@
 # TeachEasy
-A tool for teachers and student.
+Levaraging the power of NLP, we have developed **TeachEasy** with the aim of reducing the manual work for School Teachers in the domain of Question and Answer generation, Text summarization, and Paraphrasing. 
+
+## Requirements.
+```
+pip install -U transformers
+pip install streamlit
+pip install -U torch
+
+```
+## Technical stuff
+
+Question generation, Summarization and Paraphrasing is achieved using T5 model. Answer generation is developed via DistilBert.
+
+## How to use repo
+
+```streamlit run main.py```
+
+## Results and App snapshots
 
 <h1> Main template interface </h1>
 <img src="1.jpg">
