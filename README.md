@@ -5,7 +5,7 @@ Levaraging the power of NLP, we have developed **TeachEasy** with the aim of red
 ```
 pip install -U transformers==3.0.2
 pip install streamlit==0.64.0
-pip install -U torch==1.1.0
+pip install -U torch==1.6.0
 
 ```
 ## Technical stuff
