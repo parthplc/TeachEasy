@@ -14,9 +14,9 @@ pip install -U spacy
 python -m spacy download en_core_web_sm
 
 ```
-The t5-small model for summarisation,t5-base for question generation and distill bert for answer extraction would be automatically installed in your local machine when we run the streamlit app.This might be time taking for first time so keep patience.
 
 ## Technical stuff
+The t5-small model for summarisation,t5-base for question generation and distill bert for answer extraction would be automatically installed in your local machine when we run the streamlit app.This might be time taking for first time so keep patience.
 
 Question generation, Summarization and Paraphrasing is achieved using T5 model. Answer generation is developed via DistilBert.
 
