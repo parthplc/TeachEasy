@@ -3,9 +3,15 @@ Levaraging the power of NLP, we have developed **TeachEasy** with the aim of red
 
 ## Requirements.
 ```
+pip install numpy
+pip install textblob
+pip install gensim
+pip install scikit-learn
 pip install -U transformers==3.0.2
 pip install streamlit==0.64.0
 pip install -U torch==1.6.0
+pip install -U spacy
+python -m spacy download en_core_web_sm
 
 ```
 ## Technical stuff
