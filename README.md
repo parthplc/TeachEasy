@@ -12,7 +12,7 @@ pip install streamlit==0.64.0
 pip install -U torch==1.6.0
 pip install -U spacy
 python -m spacy download en_core_web_sm
-
+pip install streamlit
 ```
 
 ## Technical stuff
